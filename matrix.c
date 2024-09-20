@@ -82,3 +82,16 @@ void matrix_print(FILE *f, matrix m)
     }
   }
 }
+
+matrix matrix_times_scalar(matrix m, scalar x)
+{
+  matrix n = matrix_create(m.n1, m.n2, 3.14);
+  unsigned i;
+  unsigned j;
+  for (i=0; i<m.n1; i++) {
+    for (j=0; j<m.n2; j++) {
+      *matrix_get(n, i, j) = x*m.data[i*m.n2+j];
+    }
+  }
+  return n;
+}

@@ -18,6 +18,9 @@ int main(void)
   // Create the matrix r, addition of matrices m and n
   matrix r = matrix_add(m, n);
 
+  // Teste la multiplication par un scalaire
+  
+
   // Display the matrix r
   matrix_print(stdout, r);
   /* The result should be:
