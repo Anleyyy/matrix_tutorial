@@ -95,3 +95,29 @@ matrix matrix_times_scalar(matrix m, scalar x)
   }
   return n;
 }
+
+matrix mul_matrix(matrix a, matrix b){
+  unsigned n,m,p;
+  n = a.n1;
+  m = a.n2;
+  p = b.n2;
+
+  matrix r = matrix_create(n,p,5.);
+
+  int i,j,sum;
+
+  for (i=0; i < n; i++)
+    {
+      for (j=0; j < p; j++){
+        sum = 0;
+        for (k=0; k < m; k++){
+          sum = sum + a.data[i][k] * b.data[k][j];
+          
+        }
+        r.data[i][j] = sum;
+      }
+    }
+
+  return r;
+  
+}

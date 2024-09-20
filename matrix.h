@@ -21,5 +21,6 @@ void matrix_print(FILE *f, matrix m);
 matrix matrix_times_scalar(matrix m, scalar x);
 
 matrix add_matrix(matrix m, matrix n);
+matrix mul_matrix(matrix a, matrix b);
 
 #endif /* MATRIX_H */
